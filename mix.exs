@@ -18,19 +18,19 @@ defmodule OAuth2.Mixfile do
 
   defp deps do
     [
-      {:hackney, "~> 0.14.1"},
+      {:hackney, github: "benoitc/hackney", tag: "1.0.4",override: true},
       {:httpoison, "~> 0.5.0"},
       {:poison, "~> 1.2"},
       {:cowboy, "~> 1.0", only: :test},
-      {:plug, "~> 0.9.0"},
+       {:plug, "~> 0.10.0"},
     ]
   end
 
   defp package do
     [
-      contributors: ["Sonny Scroggin"],
+      contributors: ["Sonny Scroggin","Moses Mugisha"],
       licenses: ["MIT"],
-      links: %{github: "https://github.com/scrogson/oauth2"}
+      links: %{github: "https://github.com/mossplix/oauth2"}
     ]
   end
 end
