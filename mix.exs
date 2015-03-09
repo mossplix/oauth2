@@ -22,7 +22,7 @@ defmodule ExOauth2.Mixfile do
       {:httpoison, "~> 0.5.0"},
       {:poison, "~> 1.2"},
       {:cowboy, "~> 1.0", only: :test},
-       {:plug, "~> 0.10.0"},
+       {:plug, "~> 0.11.0"},
     ]
   end
 
