@@ -1,8 +1,8 @@
-defmodule OAuth2.Strategy do
+defmodule ExOauth2.Strategy do
 
   defmacro __using__(_opts) do
     quote location: :keep do
-      alias OAuth2.Strategy
+      alias ExOauth2.Strategy
 
       defstruct [
         client_id: nil,

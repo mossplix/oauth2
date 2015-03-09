@@ -1,10 +1,10 @@
-defmodule OAuth2.Strategy.ClientCredentials do
+defmodule ExOauth2.Strategy.ClientCredentials do
   @moduledoc """
   The Client Credentials Strategy
 
   http://tools.ietf.org/html/draft-ietf-oauth-v2-15#section-4.4
   """
-  use OAuth2.Strategy
+  use ExOauth2.Strategy
 
   @doc """
   Not used for this strategy.
@@ -23,7 +23,7 @@ defmodule OAuth2.Strategy.ClientCredentials do
       |> Map.merge(auth_scheme(auth_scheme, strategy))
       |> Map.merge(params)
 
-    OAuth2.get_token(strategy, params, opts)
+    ExOauth2.get_token(strategy, params, opts)
   end
 
   def get_token!(strategy, params \\ %{}, opts \\ []) do

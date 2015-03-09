@@ -1,4 +1,4 @@
-defmodule OAuth2.Util do
+defmodule ExOauth2.Util do
 
   def unix_now do
     {mega, sec, _micro} = :erlang.now

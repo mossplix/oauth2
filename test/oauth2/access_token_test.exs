@@ -1,7 +1,7 @@
-defmodule OAuth2.AccessTokenTest do
+defmodule ExOauth2.AccessTokenTest do
   use ExUnit.Case, async: true
 
-  alias OAuth2.AccessToken
+  alias ExOauth2.AccessToken
 
   test "expires?" do
     assert AccessToken.expires?(%AccessToken{expires_at: 0})
@@ -15,6 +15,6 @@ defmodule OAuth2.AccessTokenTest do
 
   test "expires_in" do
     assert AccessToken.expires_at(nil) == nil
-    assert AccessToken.expires_at(3600) == OAuth2.Util.unix_now + 3600
+    assert AccessToken.expires_at(3600) == ExOauth2.Util.unix_now + 3600
   end
 end

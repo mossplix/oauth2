@@ -1,10 +1,10 @@
-defmodule OAuth2.AccessToken do
+defmodule ExOauth2.AccessToken do
 
-  import OAuth2.Util
+  import ExOauth2.Util
 
-  alias OAuth2.Error
-  alias OAuth2.Request
-  alias OAuth2.AccessToken
+  alias ExOauth2.Error
+  alias ExOauth2.Request
+  alias ExOauth2.AccessToken
 
   @standard ["access_token", "refresh_token", "expires_in", "token_type"]
 

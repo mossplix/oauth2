@@ -1,11 +1,11 @@
-defmodule OAuth2.Strategy.AuthCode do
+defmodule ExOauth2.Strategy.AuthCode do
   @moduledoc """
   The Authorization Code Strategy.
 
   http://tools.ietf.org/html/draft-ietf-oauth-v2-15#section-4.1
   """
 
-  use OAuth2.Strategy
+  use ExOauth2.Strategy
 
   @doc """
   The authorization URL endpoint of the provider.
@@ -17,7 +17,7 @@ defmodule OAuth2.Strategy.AuthCode do
       client_id: strategy.client_id
     }, params)
 
-    OAuth2.authorize_url(strategy, params)
+    ExOauth2.authorize_url(strategy, params)
   end
 
   @doc """
@@ -31,7 +31,7 @@ defmodule OAuth2.Strategy.AuthCode do
       client_secret: strategy.client_secret,
       redirect_uri: strategy.redirect_uri
     }, params)
-    OAuth2.get_token(strategy, params, opts)
+    ExOauth2.get_token(strategy, params, opts)
   end
 
   def get_token!(strategy, code, params \\ %{}, opts \\ []) do

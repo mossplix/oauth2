@@ -1,11 +1,11 @@
-defmodule OAuth2.Request do
+defmodule ExOauth2.Request do
   use HTTPoison.Base
 
-  alias OAuth2.Error
-  alias OAuth2.Response
+  alias ExOauth2.Error
+  alias ExOauth2.Response
 
   def request(method, url, body \\ "", headers \\ [], opts \\ []) do
-    content_type = OAuth2.Util.content_type(headers)
+    content_type = ExOauth2.Util.content_type(headers)
     url = process_url(to_string(url))
     body = process_request_body(body, content_type)
     headers = process_request_headers(headers, content_type)

@@ -1,11 +1,11 @@
-defmodule OAuth2.Response do
+defmodule ExOauth2.Response do
 
   defstruct status_code: nil, body: nil, headers: %{}
 
   @type t :: %__MODULE__{status_code: integer, body: binary, headers: map}
 
   def new(status_code, headers, body) do
-    content_type = OAuth2.Util.content_type(headers)
+    content_type = ExOauth2.Util.content_type(headers)
     %__MODULE__{
       status_code: status_code,
       headers: headers,

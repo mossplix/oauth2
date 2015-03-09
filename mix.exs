@@ -1,9 +1,9 @@
-defmodule OAuth2.Mixfile do
+defmodule ExOauth2.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :oauth2,
+      app: :exoauth2,
       version: "0.0.3",
       elixir: "~> 1.0",
       deps: deps,

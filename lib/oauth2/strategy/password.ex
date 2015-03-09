@@ -1,10 +1,10 @@
-defmodule OAuth2.Strategy.Password do
+defmodule ExOauth2.Strategy.Password do
   @moduledoc """
   The Resource Owner Password Credentials Authorization Strategy.
 
   http://tools.ietf.org/html/draft-ietf-oauth-v2-15#section-4.3
   """
-  use OAuth2.Strategy
+  use ExOauth2.Strategy
 
   @doc """
   Not used for this strategy.
@@ -22,7 +22,7 @@ defmodule OAuth2.Strategy.Password do
       |> Map.merge(Map.take(strategy, [:client_id, :client_secret]))
       |> Map.merge(params)
 
-    OAuth2.get_token(strategy, params, opts)
+    ExOauth2.get_token(strategy, params, opts)
   end
 
   def get_token!(strategy, username, password, params \\ %{}, opts \\ []) do

@@ -1,7 +1,7 @@
-defmodule OAuth2.Strategy.PasswordTest do
+defmodule ExOauth2.Strategy.PasswordTest do
   use ExUnit.Case, async: true
 
-  alias OAuth2.Strategy.Password
+  alias ExOauth2.Strategy.Password
   test "new" do
     opts = %{
       client_id: "client_id",

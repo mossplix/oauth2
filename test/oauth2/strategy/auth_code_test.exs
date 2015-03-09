@@ -1,4 +1,4 @@
-defmodule OAuth2.Strategy.AuthCodeTest do
+defmodule ExOauth2.Strategy.AuthCodeTest do
 
   use ExUnit.Case, async: true
   use Plug.Test
@@ -29,7 +29,7 @@ defmodule OAuth2.Strategy.AuthCodeTest do
     conn = call(Client, conn(:get, location))
     assert conn.params["code"] == "1234"
 
-    assert_receive %OAuth2.AccessToken{access_token: "abc123", token_type: "Bearer"}
+    assert_receive %ExOauth2.AccessToken{access_token: "abc123", token_type: "Bearer"}
   end
 
   defp call(mod, conn) do

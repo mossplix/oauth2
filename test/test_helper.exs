@@ -28,7 +28,7 @@ defmodule Client do
   use Plug.Router
   import Plug.Conn
 
-  alias OAuth2.Strategy.AuthCode
+  alias ExOauth2.Strategy.AuthCode
 
   @redirect_uri "http://localhost:4001/auth/callback"
   @params %{redirect_uri: @redirect_uri}
